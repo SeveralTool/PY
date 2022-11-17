@@ -1,0 +1,29 @@
+Todo lo que podemos hacer con git
+Instalar GIT Y GIT BASH EN WINDOWS // LINUX YA TRAE GIT BASH(TERMINAL)
+CLARAMENTE....
+
+git --version //Para ver la version de git instalada
+git config //para ver las opciopnes de configuracion
+git config --global user.name "nombre" //para asignar git a mi nombre de usuario
+git config --global user.email "mail" //para asignar git a mi email
+git config --global core.editor "code --wait" // para adjudicar editor
+git config --global -e
+git config --global core.autocrlf true //para que los espacios sean compatibles entre windows y mac y linux "input en MAC"
+
+ls cd pwd mkdir rm(eliminar) mv(renombrar archivos)
+ls -a //para ver todos los archivos ocultos
+code . // abrir editor
+git status //ver estado de git
+git add ""nomrbre del archivo" //agregar archivos al stage (. agrega todos los archivos)
+git commit -m "mensaje" 
+......
+git restore --stage "nombre del archivo" //para restaurar
+git log ///historial de commits
+
+
+git push -u origin master //sube todo a github
+
+git checkout -b ramaB
+git push -u origin ramaB //crea otra rama(brench)en el repositorio
+
+ok
