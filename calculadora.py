@@ -1,28 +1,29 @@
-from tkinter import *
+                # Created by SeveralTool.sys
 
+from tkinter import * # Impòrtamos la libreria de Tkinter
 
-ventana = Tk()
+ventana = Tk()  #Creamos la ventana grafica
 ventana.title("Calculadora by SeveralTool")
 
 #Input
-input = Entry(ventana, font = ("Calibri 20"))
+input = Entry(ventana, font = ("Calibri 20")) #Establecemos la fuente del cuadro de texto
 input.grid(row = 0, column = 0, columnspan = 4, padx = 20, pady = 5)
 
-n = 0
+n = 0 # Variable global para no insertar caracteres desde la izquierda
 
 # Funciones
 
-def click_btn(valor):
+def click_btn(valor): # Funcion para insertar botones en el input
     global n
     input.insert(n, valor)
     n += 1
 
-def delete():
+def delete(): # Funcion para borrar input
     global n
     input.delete(0, END)
     n = 0
 
-def result():
+def result(): # Funcion para calcular y mostrar resultado
     global n
     ecua = input.get()
     resultado = eval(ecua)
