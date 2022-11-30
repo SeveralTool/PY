@@ -1,132 +1,192 @@
-                                                                    ### PYTHON ###
-                                  # Fuente:      https://github.com/mouredev/Hello-Python
+#                                                                     ### PYTHON ###
+#                                   # Fuente:      https://github.com/mouredev/Hello-Python
                                                                     
-# print ("Que andas la concha de tu madre :) ")
-# print (str(3)) #para pasar de num a string con str
+# # print ("Que andas la concha de tu madre :) ")
+# # print (str(3)) #para pasar de num a string con str
 
-# //////////////////////////////
+# # //////////////////////////////
 
-# Operadores
+# # Operadores
 
-# my_float = 2.5 * 3
-# print(int(my_float)) pasamos de float a entero con int
-# print(len("holaaa")) contar caracteres con len
-# operadores logicos son : and/or/not
+# # my_float = 2.5 * 3
+# # print(int(my_float)) pasamos de float a entero con int
+# # print(len("holaaa")) contar caracteres con len
+# # operadores logicos son : and/or/not
 
-# //////////////////////////////
+# # //////////////////////////////
 
-#poner variables en una cadena de texto con {} , poniendo f al principio
-# name, apellido, edad = "Nahuel", "Galeano", 23
-# print(f"Mi nombre es {name} y mi apellido {apellido}, tengo {edad} años.")
+# #poner variables en una cadena de texto con {} , poniendo f al principio
+# # name, apellido, edad = "Nahuel", "Galeano", 23
+# # print(f"Mi nombre es {name} y mi apellido {apellido}, tengo {edad} años.")
 
-# //////////////////////////////
+# # //////////////////////////////
 
-# Poner palabras al reves
+# # Poner palabras al reves
 
-# nom = "Nahuel"
-# rev_nom = nom[::-1]
-# print(rev_nom)
+# # nom = "Nahuel"
+# # rev_nom = nom[::-1]
+# # print(rev_nom)
 
-# //////////////////////////////
+# # //////////////////////////////
 
-# Funciones
+# # Funciones
 
-# .count() = cuenta cuantos caracteres
-# .isnumeric() = verifica si es numero
-# .lower() = pasa a minuscula
-# .upper() = pasa a mayuscula
+# # .count() = cuenta cuantos caracteres
+# # .isnumeric() = verifica si es numero
+# # .lower() = pasa a minuscula
+# # .upper() = pasa a mayuscula
 
-# //////////////////////////////
+# # //////////////////////////////
 
-# Listas
+# # Listas
  
-# my_lista = [23,234,24, "Nahuel",23]
-# my_other_list = list()
-# print(my_lista[1])
-# my_lista.append("Nahuel Galeano") # agregar elemento al final
-# my_lista.insert(2,"JAJA") # insertar en posicion 1 ese texto
-# my_lista.remove("JAJA") # eliminar ese elemento
-# del my_lista[2] # elimina el elemento 2, pero no retorna nada en console
-# my_lista.clear() # borra la lista
-# my_lista.sort() # orderna la lista
+# # my_lista = [23,234,24, "Nahuel",23]
+# # my_other_list = list()
+# # print(my_lista[1])
+# # my_lista.append("Nahuel Galeano") # agregar elemento al final
+# # my_lista.insert(2,"JAJA") # insertar en posicion 1 ese texto
+# # my_lista.remove("JAJA") # eliminar ese elemento
+# # del my_lista[2] # elimina el elemento 2, pero no retorna nada en console
+# # my_lista.clear() # borra la lista
+# # my_lista.sort() # orderna la lista
 
-# //////////////////////////////
+# # //////////////////////////////
 
-# Tuples
+# # Tuples
 
-# No se pueden modificar, se deben transformar a listas y luego a tuplas.....todo un lio..
-# Estructura fija de valores
+# # No se pueden modificar, se deben transformar a listas y luego a tuplas.....todo un lio..
+# # Estructura fija de valores
 
-# //////////////////////////////
+# # //////////////////////////////
 
-# Sets
+# # Sets
 
-# Un set no admite elementos repetidos
-# my_set = set("ok")
-# my_other_Set = {} #esto es un diccionario
-# my_other_Set = {"Nahuel", "Galeano", 23, "Nahuel"}
-# print(len(my_other_Set))
-# new = my_other_Set.union(my_set)
-# print("Nahuel" in my_other_Set) # con esto comprobamos si existe Nahuel en la variable
-# print(new)
+# # Un set no admite elementos repetidos
+# # my_set = set("ok")
+# # my_other_Set = {} #esto es un diccionario
+# # my_other_Set = {"Nahuel", "Galeano", 23, "Nahuel"}
+# # print(len(my_other_Set))
+# # new = my_other_Set.union(my_set)
+# # print("Nahuel" in my_other_Set) # con esto comprobamos si existe Nahuel en la variable
+# # print(new)
 
-# print(my_other_Set.difference(my_set))
+# # print(my_other_Set.difference(my_set))
 
-# //////////////////////////////
+# # //////////////////////////////
 
-# Diccionarios
-# seria como un objeto JSON
-my_diccionario = dict()
-my_other_diccionario = {
-                        "Nombre":"Nahuel",
-                        "Apellido":"Galeano",
-                        "Edad":23,
-                        "Lenguages": {"JS","Python","Kotlin"},
-                        1: {"CI:", 834332462}
-                        }
-my_other_diccionario["Nombre"] = "SeveralTool" # actualizar valor
+# # Diccionarios
+# # seria como un objeto JSON
+# # my_diccionario = dict()
+# # my_other_diccionario = {
+# #                         "Nombre":"Nahuel",
+# #                         "Apellido":"Galeano",
+# #                         "Edad":23,
+# #                         "Lenguages": {"JS","Python","Kotlin"},
+# #                         1: {"CI:", 834332462}
+# #                         }
+# # my_other_diccionario["Nombre"] = "SeveralTool" # actualizar valor
+# # # .keys() # nos retorna solo el valor de las keys.... nombre, apellido etc
+# # # .fromkeys(("Nombre","Apellido"))  # creamos un diccionario nuevo sin valores
+# # print(my_other_diccionario["Nombre"])
 
-print(my_other_diccionario["Nombre"])
+# # //////////////////////////////
+
+# # Condicionales
+
+# # num = 2 * 2
+# # if (num < 10 and num > 20):
+# #     print("ajsjasjajs")
+# # elif (num == 4):
+# #     print("Ok, es 4")
+# # else :
+# #     print("tu madree") 
+
+# # txt = ""
+# # if not txt:
+# #     print("No existe")
+# # else:
+# #     print("Existe")
+
+# # //////////////////////////////
+
+# # LOOPS
+
+#         # While
+# cond = 7
+        
+# while cond < 10:
+#     cond += 1 # se incrementa con += / -=
+#     print(cond)
+# else:
+#     print("Es mayor o igual a 10") # else en while
+
+# while cond < 100:
+#     print(cond)
+#     cond += 2   
+#     if cond == 50:
+#         print(cond)
+#         print("Se termino")
+#         break # para parar el bucle si queres
+
+#         # For
+
+# lista = [234,234,4,1,1264,5723,856,25,7,6,8,234,625,78,23,878,9,23,26]
+
+# print("Bucle for")
+# for element in lista:
+#     print(element)
+    
+#     if element == 26:
+#         print("Ta")
+#         break
+        
+
+# # //////////////////////////////
+
+# # Funciones 
+
+# def funcion1():
+#     print("Nahuel sabe")
+
+# # if funcion1:
+# #     print("Mi funcion existe")
+
+
+def suma(num1, num2):
+    print(num1 + num2)
+    
+suma(10,5)    
+suma(40,30)
+    
+str = "".join("holaaa")                     # .join se usa para agregar contenido
+print(str)
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+# # //////////////////////////////
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+
+# # //////////////////////////////
+# # //////////////////////////////
+# # //////////////////////////////
+# # //////////////////////////////
 
 
 
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-
-# //////////////////////////////
-# //////////////////////////////
-# //////////////////////////////
-# //////////////////////////////
-
-
-
-# num = 2
-
-# if (num < 10) : print("ajsjasjajs")
-# else : print("tu madree")
