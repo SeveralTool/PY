@@ -1,8 +1,9 @@
-#Python
-# Python
 
-# Todas mis notas y ejercicios sobre Python
+# Python 🐍
 
-# No se incuiran proyectos personales
+# Todas mis notas y ejercicios sobre Python ✔️
 
-By SeveralTool
+# ❌ No se incuirán proyectos personales ❌
+
+By SeveralTool 😎
+💯
