@@ -1,0 +1,5 @@
+Mi nombre es Nahuel
+Tengo 23 años
+Vivo en Uruguay
+Me encanta Python
+Tambien me gusta JavaSript
