@@ -554,72 +554,14 @@
 
 # Expresiones Regulares
 
-import re
+# import re
 
-str = "Esto es un ejemplo de str"
-str2 = "Esto es un ejemplo de str"
-print(re.match("str", str)) # Busca desde el principio
-print(re.match("Esto es un ejemplo", str2))
+# str = "Esto es un ejemplo de str"
+# str2 = "Esto es un ejemplo de str"
+# print(re.match("str", str)) # Busca desde el principio
+# print(re.match("Esto es un ejemplo", str2))
 
 ###################################################
-
-################# BACKEND ##################
-############################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
