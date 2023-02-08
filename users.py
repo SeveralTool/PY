@@ -40,11 +40,6 @@ def search_user(id: int):
 
 
 
-
-
-
-
-
 # # Opcion 2 mas "manual"
 # @app.get("/users") # url
 # async def users():
