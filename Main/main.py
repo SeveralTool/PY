@@ -10,8 +10,13 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from Products import products
 
 app = FastAPI()
+
+# Router
+app.include_router(products.router)
+
 
 @app.get("/") # url
 async def root():
