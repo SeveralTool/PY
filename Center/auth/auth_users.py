@@ -13,16 +13,15 @@ class User(BaseModel):
 class UserDB(User): # Heredacion
     password: str
 
-
 users_db = {
     "nahuel":{
-        "email": "nahuel@gmail.com",
         "username": "nahuel",
+        "email": "nahuel@gmail.com",
         "password": "1234"    
     },
-    "persona 2":{
-        "email": "persona2@gmail.com",
-        "username": "Person Two",
+    "PersonTwo":{
+        "username": "PersonTwo",
+        "email": "persontwo@gmail.com",
         "password": "1234567"    
     }    
 }
@@ -33,9 +32,9 @@ async def current_user(token: str = Depends(oauth)):
     if not user:
         # Modo de respuesta de errores : status_code = status. mostrará los errores disponibles.
         raise HTTPException(
-                            status_code=401, # Codigo de error
-                            detail="Token no disponible.", # Mensaje
-                            headers={"WWW.Authenticate": "Bearer"}) # Estandar
+            status_code=401,# Codigo de error
+            detail="Token no disponible.", # Mensaje
+            headers={"WWW.Authenticate": "Bearer"}) # Estandar
         # return "No se encontro el token."
     return user
     
@@ -54,13 +53,15 @@ async def login(form: OAuth2PasswordRequestForm= Depends()):
     if not form.password == user.password:
         return "La password no es correcta."
     
-    return {"acces_token": user.username,"token_type":"bearer"}
+    return {"access_token": user.username,"token_type":"bearer"}
         
 @router.get("/users/me")
 async def me(user: User = Depends(current_user)):
     return user
 
-
+@router.get("/test")
+async def me():
+    return "fuck me"
 
 
 
