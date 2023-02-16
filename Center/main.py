@@ -16,17 +16,17 @@ from prod import products
 from pydantic import BaseModel
 from auth import auth_users
 
-router = APIRouter()
+app = APIRouter()
 
 # Router
-router.include_router(products.router)
-router.include_router(auth_users.router)
+app.include_router(products.app)
+app.include_router(auth_users.app)
 
-@router.get("/") # url
+@app.get("/") # url
 async def root():
     return "Hola FastAPI"
 
-@router.get("/github") # url/github
+@app.get("/github") # url/github
 async def root():
     return "https://github/severaltool"
 
@@ -88,7 +88,7 @@ def search_user(id: int):
 
 # Agregar un usario con POST
 
-@router.post("/newUser/")
+@app.post("/newUser/")
 async def createUser(user: User):
         if type(search_user(user.id)) == User:
             return {"Ya existe el usuario."}
@@ -97,7 +97,7 @@ async def createUser(user: User):
    
 # Consulta para el post
 
-@router.get("/users/")
+@app.get("/users/")
 async def find():
     return user_list   
  
@@ -106,7 +106,7 @@ async def find():
 
 # Actualizar el usuario
 
-@router.put("/updateUser/")
+@app.put("/updateUser/")
 async def user(user: User):
     for i, update_user in enumerate(user_list):
         if update_user.id == user.id:
@@ -114,7 +114,7 @@ async def user(user: User):
     
 # Eliminar el usuario
 
-@router.delete("/user/{id}")
+@app.delete("/user/{id}")
 async def delete(id:int):
     for i, delete in enumerate(user_list):
         if delete.id == id:
