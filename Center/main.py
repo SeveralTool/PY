@@ -14,12 +14,13 @@
 from fastapi import APIRouter
 from prod import products
 from pydantic import BaseModel
+from auth import auth_users
 
 router = APIRouter()
 
 # Router
 router.include_router(products.router)
-
+router.include_router(auth_users.router)
 
 @router.get("/") # url
 async def root():
