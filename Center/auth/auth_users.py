@@ -45,7 +45,6 @@ def search_user(username: str):
 
 
 @app.post("/login") # url
-
 async def login(form: OAuth2PasswordRequestForm= Depends()):
     user_db = users_db.get(form.username)
     if not user_db:
