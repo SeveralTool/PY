@@ -59,7 +59,10 @@ async def login(form: OAuth2PasswordRequestForm= Depends()):
     return {"access_token": access_token ,"token_type":"bearer"}
 
 
-
+@app.get("/eh") # url
+async def eh():
+    return"Tu mama "
+    
 
 
 
