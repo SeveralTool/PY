@@ -15,18 +15,22 @@ from fastapi import APIRouter
 from prod import products
 from pydantic import BaseModel
 from auth import auth_users
+from auth import auth_JWT
+from client import db
 
-app = APIRouter()
+router = APIRouter()
 
 # Router
-app.include_router(products.app)
-app.include_router(auth_users.app)
+router.include_router(products.router)
+router.include_router(auth_users.router)
+router.include_router(auth_JWT.router)
+router.include_router(db.router)
 
-@app.get("/") # url
+@router.get("/") # url
 async def root():
     return "Hola FastAPI"
 
-@app.get("/github") # url/github
+@router.get("/github") # url/github
 async def root():
     return "https://github/severaltool"
 
@@ -88,7 +92,7 @@ def search_user(id: int):
 
 # Agregar un usario con POST
 
-@app.post("/newUser/")
+@router.post("/newUser/")
 async def createUser(user: User):
         if type(search_user(user.id)) == User:
             return {"Ya existe el usuario."}
@@ -97,7 +101,7 @@ async def createUser(user: User):
    
 # Consulta para el post
 
-@app.get("/users/")
+@router.get("/users/")
 async def find():
     return user_list   
  
@@ -106,7 +110,7 @@ async def find():
 
 # Actualizar el usuario
 
-@app.put("/updateUser/")
+@router.put("/updateUser/")
 async def user(user: User):
     for i, update_user in enumerate(user_list):
         if update_user.id == user.id:
@@ -114,17 +118,12 @@ async def user(user: User):
     
 # Eliminar el usuario
 
-@app.delete("/user/{id}")
+@router.delete("/user/{id}")
 async def delete(id:int):
     for i, delete in enumerate(user_list):
         if delete.id == id:
             del user_list[i]
         
-            
-
-
-
-
 
 ######################################
 ######################################

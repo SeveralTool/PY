@@ -1,6 +1,6 @@
 #AUTENTICACION CON ENCRIPTACIÓN
 
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt
@@ -12,7 +12,7 @@ ALGORITHM = "HS256"
 ACCES_TOKEN_DURATION = 1
 crypt = CryptContext(schemes=["bcrypt"])
 
-app = FastAPI()
+router = APIRouter()
 oauth = OAuth2PasswordBearer(tokenUrl="login")
 
 
@@ -40,7 +40,7 @@ def search_user(username: str):
     if username in users_db:
         return UserDB(**users_db[username])
 
-@app.post("/login") # url
+@router.post("/login") # url
 async def login(form: OAuth2PasswordRequestForm= Depends()):
     
     user_db = users_db.get(form.username)
@@ -59,11 +59,8 @@ async def login(form: OAuth2PasswordRequestForm= Depends()):
     return {"access_token": access_token ,"token_type":"bearer"}
 
 
-@app.get("/eh") # url
+@router.get("/eh") # url
 async def eh():
     return"Tu mama "
     
 
-
-
-    
